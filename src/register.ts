@@ -25,7 +25,7 @@ form.addEventListener("submit", async (event) => {
   const mobile = parseInt((form[3] as HTMLInputElement).value);
   if(userPassword.length<8){
     alert(`Password should of 8 characters or greater than that!`);
-  }else if(isNaN(mobile) || mobile.toString().length < 10){
+  }else if(mobile.toString().length===10 && mobile.toString().length < 10){
     alert(`Please enter valid mobile number please!`);
   }else{
   const user: Newuser = {

@@ -9,7 +9,7 @@ table,tr,th,td{
   border-collapse: collapse;
 }
 table{
-  padding:20px
+  padding:20px;
   text-align: center;
 }
 #tablediv{

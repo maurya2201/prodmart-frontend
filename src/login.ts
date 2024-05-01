@@ -5,11 +5,26 @@ loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const email = (loginForm[0] as HTMLInputElement).value;
     const password = (loginForm[1] as HTMLInputElement).value;
-    if (email.includes("admin@gmail.com") && password.includes("admin")) {
+    if (email.includes("admin@gmail.com")) {
+      const userInfo = {
+        email: email,
+        password: password
+      }
+      const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(userInfo)
+      }
+      const user = await fetch(`https://prodmart-backend.onrender.com/api/login`, options);
+      if(user.status===200){
       alert(`Login succcesfully!`);
       sessionStorage.setItem("admin", "true");
       window.location.href = "../admin/admin.html";
-    } else {
+      }else if(user.status===400){
+        alert(`Invalid password!`);
+      }
+    }
+    else {
       const userInfo = {
         email: email,
         password: password

@@ -17,8 +17,9 @@ const getUsers = () => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield fetch(`https://prodmart-backend.onrender.com/api/user`);
     if (data.status === 200) {
         const users = yield data.json();
+        const onlyUsers = users.filter(({ name }) => name != "admin");
         let listing = ``;
-        users.forEach(({ _id, name, email, mobile, gender, isUser, state }, index) => listing += `
+        onlyUsers.forEach(({ _id, name, email, mobile, gender, isUser, state }) => listing += `
     <tr>
     <td>${name}</td>
     <td>${email}</td>

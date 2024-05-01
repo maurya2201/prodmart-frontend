@@ -14,10 +14,25 @@ loginForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0
         event.preventDefault();
         const email = loginForm[0].value;
         const password = loginForm[1].value;
-        if (email.includes("admin@gmail.com") && password.includes("admin")) {
-            alert(`Login succcesfully!`);
-            sessionStorage.setItem("admin", "true");
-            window.location.href = "../admin/admin.html";
+        if (email.includes("admin@gmail.com")) {
+            const userInfo = {
+                email: email,
+                password: password
+            };
+            const options = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(userInfo)
+            };
+            const user = yield fetch(`http://localhost:4000/api/login`, options);
+            if (user.status === 200) {
+                alert(`Login succcesfully!`);
+                sessionStorage.setItem("admin", "true");
+                window.location.href = "../admin/admin.html";
+            }
+            else if (user.status === 400) {
+                alert(`Invalid password!`);
+            }
         }
         else {
             const userInfo = {
@@ -29,7 +44,7 @@ loginForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(userInfo)
             };
-            const user = yield fetch(`https://prodmart-backend.onrender.com/api/login`, options);
+            const user = yield fetch(`http://localhost:4000/api/login`, options);
             if (user.status === 200) {
                 const data = yield user.json();
                 if (data.isUser === true && data.state === true) {

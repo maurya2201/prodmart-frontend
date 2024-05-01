@@ -18,8 +18,9 @@ const getUsers=async()=>{
   const data = await fetch(`https://prodmart-backend.onrender.com/api/user`);
   if(data.status===200){
   const users:Userdetails[] = await data.json();
+  const onlyUsers:Userdetails[] = users.filter(({name})=>name!="admin");
   let listing:string = ``;
-  users.forEach(({_id,name,email,mobile,gender,isUser,state},index)=>
+  onlyUsers.forEach(({_id,name,email,mobile,gender,isUser,state},index)=>
     listing+=`
     <tr>
     <td>${name}</td>

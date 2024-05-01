@@ -1,0 +1,35 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #EEF5FF;
+}
+form{
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+  width: 500px;
+  height: 520px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1679AB;
+  margin-top: 70px;
+  color: white;
+}
+.form-control{
+  margin-bottom: 10px;
+  width: 400px;
+  border: 2px solid black;
+}
+select{
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid black;
+}

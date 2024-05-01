@@ -1,0 +1,28 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #EEF5FF;
+}
+form{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 450px;
+  box-shadow: 5px 5px 10px black;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1679AB;
+  margin-top: 180px;
+  color: white;
+}
+.form-control{
+  margin-bottom: 10px;
+  width: 400px;
+  border: 2px solid black;
+}

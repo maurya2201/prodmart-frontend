@@ -1,0 +1,25 @@
+body{
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #EEF5FF;
+}
+table,tr,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table{
+  width: 1000px;
+  height: auto;
+  text-align: center;
+}
+#tablediv{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+th{
+  height: 40px;
+  background-color:#5BBCFF;
+}

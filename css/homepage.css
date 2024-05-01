@@ -1,0 +1,46 @@
+body{
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #EEF5FF;
+}
+.card{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 4px black;
+  border: 1px solid black;
+}
+select{
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right:10px;
+  color:black;
+  font-weight: bold;
+  text-align: center;
+}
+#search{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color:black;
+  font-weight: bold;
+}
+#loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#load{
+  height: 100px;
+  width: 100px;
+  border: 12px solid grey;
+  border-radius: 50%;
+  border-right-color:#5BBCFF;
+  animation: spin 1s ease infinite;
+}
+@keyframes spin{
+  100%{
+    rotate: 360deg;
+  }
+}

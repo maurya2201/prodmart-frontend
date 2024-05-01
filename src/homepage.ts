@@ -22,7 +22,7 @@ const getProducts=async()=>{
   let product = ``;
   products.forEach(({id,title,thumbnail})=>
     product+=`
-  <div class="col-3">
+  <div class="col-4">
   <div onclick="viewDetail(${id})" class="card" style="width: 18rem;">
   <img class="card-img-top" loading="lazy" height="150px" width="200px" src="${thumbnail}" alt="${title}">
   <div class="card-body">
@@ -54,7 +54,7 @@ category.addEventListener("change",async(event)=>{
   let product = ``;
   category.forEach(({id,title,thumbnail})=>
     product+=`
-  <div class="col-3">
+  <div class="col-4">
   <div onclick="viewDetail(${id})" class="card" style="width: 18rem;">
   <img class="card-img-top" loading="lazy" height="150px" width="200px" src="${thumbnail}" alt="${title}">
   <div class="card-body">
@@ -78,7 +78,7 @@ search.addEventListener("keyup",async(event)=>{
     let product = ``;
   search.forEach(({id,title,thumbnail})=>
     product+=`
-  <div class="col-3">
+  <div class="col-4">
   <div onclick="viewDetail(${id})" class="card" style="width: 18rem;">
   <img class="card-img-top" loading="lazy" height="150px" width="200px" src="${thumbnail}" alt="${title}">
   <div class="card-body">

@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, fun
     if (userPassword.length < 8) {
         alert(`Password should of 8 characters or greater than that!`);
     }
-    else if (isNaN(mobile) || mobile.toString().length < 10) {
+    else if (mobile.toString().length===10 && mobile.toString().length < 10) {
         alert(`Please enter valid mobile number please!`);
     }
     else {

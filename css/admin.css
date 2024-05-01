@@ -9,8 +9,6 @@ table,tr,th,td{
   border-collapse: collapse;
 }
 table{
-  width:auto;
-  height: auto;
   text-align: center;
 }
 #tablediv{

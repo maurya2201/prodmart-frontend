@@ -24,7 +24,7 @@ loginForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(userInfo)
             };
-            const user = yield fetch(`http://localhost:4000/api/login`, options);
+            const user = yield fetch(`https://prodmart-backend.onrender.com/api/login`, options);
             if (user.status === 200) {
                 alert(`Login succcesfully!`);
                 sessionStorage.setItem("admin", "true");
@@ -44,7 +44,7 @@ loginForm.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(userInfo)
             };
-            const user = yield fetch(`http://localhost:4000/api/login`, options);
+            const user = yield fetch(`https://prodmart-backend.onrender.com/api/login`, options);
             if (user.status === 200) {
                 const data = yield user.json();
                 if (data.isUser === true && data.state === true) {

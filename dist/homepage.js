@@ -24,7 +24,7 @@ const getProducts = () => __awaiter(void 0, void 0, void 0, function* () {
     const products = data.products;
     let product = ``;
     products.forEach(({ id, title, thumbnail }) => product += `
-  <div class="col-3">
+  <div class="col-4">
   <div onclick="viewDetail(${id})" class="card" style="width: 18rem;">
   <img class="card-img-top" loading="lazy" height="150px" width="200px" src="${thumbnail}" alt="${title}">
   <div class="card-body">
@@ -54,7 +54,7 @@ category.addEventListener("change", (event) => __awaiter(void 0, void 0, void 0,
             const category = products.filter(({ category }) => value === category);
             let product = ``;
             category.forEach(({ id, title, thumbnail }) => product += `
-  <div class="col-3">
+  <div class="col-4">
   <div onclick="viewDetail(${id})" class="card" style="width: 18rem;">
   <img class="card-img-top" loading="lazy" height="150px" width="200px" src="${thumbnail}" alt="${title}">
   <div class="card-body">
@@ -79,7 +79,7 @@ search.addEventListener("keyup", (event) => __awaiter(void 0, void 0, void 0, fu
         const search = products.filter(({ title }) => title.toLowerCase().includes(value.toLowerCase()));
         let product = ``;
         search.forEach(({ id, title, thumbnail }) => product += `
-  <div class="col-3">
+  <div class="col-4">
   <div onclick="viewDetail(${id})" class="card" style="width: 18rem;">
   <img class="card-img-top" loading="lazy" height="150px" width="200px" src="${thumbnail}" alt="${title}">
   <div class="card-body">

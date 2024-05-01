@@ -32,7 +32,7 @@ const getUsers=async()=>{
     <span style="display:inline-block">${state?"Active":"Deactive"}</span>
     </td>
     <td>
-    <button onclick="changeUserState('${_id}')" type="button" class="btn btn-primary">${state?"Deactivate user":"Activate User"}</button>
+    <button onclick="changeUserState('${_id}')" type="button" class="btn btn-primary">${state?"Deactivate":"Activate"}</button>
     <button onclick="deleteUser('${_id}')" type="button" class="btn btn-danger">Delete</button>
     </td>
     </tr>
